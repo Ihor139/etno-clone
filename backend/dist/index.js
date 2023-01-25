@@ -34,6 +34,7 @@ const dotenv = __importStar(require("dotenv"));
 const routes_1 = require("./routes");
 dotenv.config();
 const corsOptions = {
+    origin: 'https://etno-clone.vercel.app/',
     credentials: true,
     optionSuccessStatus: 200
 };
