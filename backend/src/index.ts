@@ -14,10 +14,10 @@ import {
 } from "./routes";
 
 dotenv.config();
-const corsOptions ={
+const corsOptions = {
   origin: '*',
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200
 }
 
 const PORT = process.env.PORT;
@@ -34,6 +34,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use("/upload", express.static("upload"));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,UPDATE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+  next();
+});
 
 app.use('/api', [
   ProductRouter,
