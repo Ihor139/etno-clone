@@ -22,9 +22,9 @@ const BlogPreview: React.FC = () => {
       <div className={clsx([styles.blogInner, "siteContainer"])}>
         <div className={clsx([styles.posts])}>
           <div className={clsx([styles.blogPostList])}>
-            {posts.map((post) => (
+            {Array.isArray(posts) ? posts.map((post) => (
               <BlogPreviewCase key={String(post._id)} {...post} />
-            ))}
+            )) : []}
           </div>
         </div>
         <div className={clsx([styles.blogLink])}>

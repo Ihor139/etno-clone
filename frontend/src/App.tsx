@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
 	React.useEffect(() => {
 		;(async () => {
-			await axios.get('/token/add')
+			await axios.get('api/token/add')
 		})();
 	}, [])
 
