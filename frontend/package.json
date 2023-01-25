@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://etno-clone-node.vercel.app/api",
+  "proxy": "http://etno-clone-node.vercel.app/api",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "@splidejs/react-splide": "^0.7.12",
