@@ -12,8 +12,6 @@ import {
   UserRouter,
   GuestRouter
 } from "./routes";
-import {GuestController} from "./controllers";
-import router from "./routes/Guest";
 
 dotenv.config();
 const corsOptions ={
@@ -37,12 +35,10 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use("/upload", express.static("upload"));
 
-app.get("/api/token/add", GuestController.add);
-
 app.use('/api', [
   ProductRouter,
   UserRouter,
-  // GuestRouter,
+  GuestRouter,
   NavigationRouter,
   PostRouter,
   CartRouter,

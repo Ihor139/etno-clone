@@ -25,8 +25,7 @@ class GuestController {
                 }
                 const token = service_1.TokenService.generateRandom();
                 const guest = yield service_1.GuestService.add(token);
-                res.cookie("userToken", token);
-                res.json(guest);
+                res.cookie("userToken", token).json(guest);
             }
             catch (error) {
                 res.status(500).json({

@@ -19,8 +19,7 @@ class GuestController {
 			const token: string = TokenService.generateRandom();
 			const guest: Guest = await GuestService.add(token);
 
-			res.cookie("userToken", token);
-			res.json(guest);
+			res.cookie("userToken", token).json(guest);
 		} catch (error) {
 			res.status(500).json({
 				message: "Failed to register guest",
