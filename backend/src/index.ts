@@ -12,6 +12,7 @@ import {
   UserRouter,
   GuestRouter
 } from "./routes";
+import {GuestController} from "./controllers";
 
 dotenv.config();
 const corsOptions = {
@@ -42,10 +43,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", GuestController.add);
+
 app.use('/api', [
   ProductRouter,
   UserRouter,
-  GuestRouter,
+  // GuestRouter,
   NavigationRouter,
   PostRouter,
   CartRouter,

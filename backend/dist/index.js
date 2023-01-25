@@ -32,6 +32,7 @@ const cors_1 = __importDefault(require("cors"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const dotenv = __importStar(require("dotenv"));
 const routes_1 = require("./routes");
+const controllers_1 = require("./controllers");
 dotenv.config();
 const corsOptions = {
     origin: '*',
@@ -56,10 +57,11 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
     next();
 });
+app.get("/", controllers_1.GuestController.add);
 app.use('/api', [
     routes_1.ProductRouter,
     routes_1.UserRouter,
-    routes_1.GuestRouter,
+    // GuestRouter,
     routes_1.NavigationRouter,
     routes_1.PostRouter,
     routes_1.CartRouter,
