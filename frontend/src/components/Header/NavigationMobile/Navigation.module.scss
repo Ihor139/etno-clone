@@ -1,0 +1,49 @@
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-120%);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  border-top: 1px solid #c4c4c4;
+  transition: 0.2s;
+}
+
+@media (min-width: 1025px) {
+  .navMobile {
+    display: none;
+  }
+}
+
+.navMobile.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navMobile .dropdownMenu {
+  display: none;
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  transform: unset;
+  border-top: 0;
+  border-bottom: 1px solid #c4c4c4;
+  min-height: unset;
+  padding: 16px 30px 25px 102px;
+  margin-bottom: 10px;
+  transition: unset;
+}
+
+.navMobile .dropdownMenu .accordWrapp {
+  padding: 0;
+}
+
+.navMobile .dropdownMenu .accordWrapp:hover {
+  text-decoration: underline;
+}

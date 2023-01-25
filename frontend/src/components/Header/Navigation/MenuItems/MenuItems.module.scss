@@ -1,0 +1,40 @@
+
+.item {
+  display: inline-block;
+  padding: 21px 20px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #1E0F00;
+  &:hover .title:after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1220px) {
+  .item {
+    padding: 21px 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    padding: 0;
+  }
+}
+
+
+
+.dropdown .accordWrapp a {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #525252;
+  padding: 8px 20px;
+  width: fit-content;
+}

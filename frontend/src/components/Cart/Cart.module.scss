@@ -1,0 +1,440 @@
+.basketPopup {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate(120%);
+  transition: 0.3s;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  &.open {
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.basketBody {
+  position: relative;
+}
+
+.basket {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #c4c4c4;
+}
+
+@media (max-width: 992px) {
+  .basket {
+    border: 0;
+    border-top: 1px solid #c4c4c4;
+  }
+}
+
+.basketPopup {
+  top: 62px;
+}
+
+@media (max-width: 680px) {
+  .basketPopup {
+    top: 48px;
+  }
+}
+
+.basketContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.basketBody {
+  height: calc(100% - 62px);
+  margin: 0 0 0 auto;
+  padding: 0;
+  width: fit-content;
+  max-width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .basketBody {
+    height: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 992px) {
+  .basketBody {
+    max-width: 100%;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 680px) {
+  .basketBody {
+    height: calc(100% - 48px);
+  }
+}
+
+.basketBody {
+}
+
+.basketClose {
+  cursor: pointer;
+  margin-right: 45px;
+  margin-left: auto;
+}
+
+.basketInner {
+  height: 100%;
+}
+
+.basketContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 400px;
+  min-width: 400px;
+  padding: 0 10px 19px 16px;
+  margin-left: auto;
+}
+
+@media (max-width: 992px) {
+  .basketContainer {
+    max-width: 100%;
+    min-width: initial;
+  }
+}
+
+.basketTop {
+  padding-top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.basketTop .popup__close {
+  margin-right: 22px;
+  margin-top: 3px;
+}
+
+@media (max-width: 992px) {
+  .basketTop .popup__close {
+    margin-right: 8px;
+  }
+}
+
+.basketTitle {
+  font-family: "AkzidenzGroteskPro";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 17px;
+  color: #1e0f00;
+  // margin: 0 auto;
+  margin-left: auto;
+  transform: translateX(20px);
+}
+
+.basketListWrapp {
+  height: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.basketList {
+  height: 100%;
+}
+
+.basketList {
+  padding-right: 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.basketList::-webkit-scrollbar {
+  width: 0px;
+}
+
+.basketList::-webkit-scrollbar-track {
+  background-color: #757575;
+}
+
+.basketList::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  outline: none;
+}
+
+@media (max-width: 680px) {
+  .basketList {
+    padding: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .basketList {
+    margin-bottom: 5px;
+  }
+}
+
+.basketCase {
+  margin-bottom: 30px;
+}
+
+.basketCase:last-child {
+  margin-bottom: 0;
+}
+
+.basketCaseBody {
+  display: flex;
+  gap: 11px;
+}
+
+.basketImageWrapp {
+  flex: 1 0 194px;
+}
+
+@media (max-width: 992px) {
+  .basketImageWrap {
+    flex: 1 1 43%;
+    min-width: 130px;
+  }
+}
+
+.basketCaseImage {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.basketCaseImage:before {
+  content: "";
+  display: block;
+  padding-bottom: 134%;
+}
+
+.basketCaseImage picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basketCaseImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.basketCaseInfo {
+  width: 100%;
+}
+
+.basketCaseTitle {
+  padding-top: 6px;
+  margin-bottom: 24px;
+  min-height: 57px;
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1e0f00;
+}
+
+.basketCaseDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.basketCaseRow {
+  display: flex;
+  align-items: center;
+}
+
+.basketCaseColLabel {
+  min-width: 76px;
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1e0f00;
+}
+
+@media (max-width: 680px) {
+  .basketCaseColLabel {
+    min-width: 55px;
+  }
+}
+
+.basketCaseColTxt {
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1e0f00;
+}
+
+.basketCaseColTxt .currencyIco {
+  text-transform: initial;
+  margin-left: 3px;
+}
+
+.basketCounter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #1e0f00;
+  margin-left: -5px;
+}
+
+.basketCounter .counter {
+  text-align: center;
+  width: 100%;
+  max-width: 25px;
+  min-width: 25px;
+}
+
+.basketCounter .plus {
+  cursor: pointer;
+  padding: 0 5px;
+  margin-left: -5px;
+}
+
+.basketCounter .minus {
+  cursor: pointer;
+  padding: 0 5px;
+  margin-right: -5px;
+}
+
+.basketCaseRemove {
+  margin-top: 20px;
+}
+
+.basketCaseRemove a {
+  transition: 0.5s;
+}
+
+.basketCaseRemove a:hover {
+  color: #1e2022;
+}
+
+.basketCaseRemove .basketCaseColTxt {
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #808080;
+}
+
+.basketActions {
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+.basketProdTitle {
+  text-align: center;
+  font-family: "AkzidenzGroteskPro";
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 17px;
+  color: #1e0f00;
+  padding-bottom: 20px;
+  transform: translateX(-5px);
+}
+
+.basketButtons {
+  padding-right: 11px;
+}
+
+.basketBtn {
+  display: block;
+  padding: 13px 0;
+  width: 100%;
+  margin-bottom: 6px;
+  font-family: "AkzidenzGroteskPro";
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 17px;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.basketBtn:last-child {
+  margin-bottom: 0;
+}
+
+.btnDark {
+  background-color: #1e2022;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btnDark:hover {
+  text-decoration: underline;
+}
+
+.btnLight {
+  text-decoration: underline;
+  color: #1e0f00;
+}
+
+.btnLight:hover {
+  text-decoration: none;
+}
+
+.basket .skuPropList {
+  cursor: pointer;
+  border-radius: 0;
+  border: 0;
+  background-color: #fff;
+  color: #1e2022;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0 10px;
+  margin-left: -10px;
+}
+
+.basket .skuPropList::-ms-expand {
+  display: none;
+}
+
+.basketCaseRemove {
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.disabledBtn{
+  pointer-events: none !important;
+  opacity: 0.2
+}

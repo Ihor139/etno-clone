@@ -1,0 +1,282 @@
+.previewGoodsCase {
+  width: 25%;
+  padding: 0 2.5px;
+}
+
+@media (max-width: 992px) {
+  .previewGoodsCase {
+    flex: 0 0 auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .previewGoodsCase {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .goodsCaseinner {
+    padding: 0;
+  }
+}
+
+.goodsCaseImage {
+  position: relative;
+  // overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.goodsCaseImage picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodsCaseImage:hover .goodsCaseActions {
+  opacity: 1;
+  visibility: visible;
+}
+
+.goodsCaseImage:hover .goodsCaseImagePrev,
+.goodsCaseImage:hover .goodsCaseImageNext {
+  opacity: 1;
+  visibility: visible;
+}
+
+.goodsCaseImageSlider {
+}
+
+@media (max-width: 992px) {
+  .goodsCaseImageWrapper {
+    transform: unset !important;
+  }
+}
+
+.goodsCaseImageSlide {
+  display: flex;
+  position: relative;
+}
+
+.goodsCaseImageSlideInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .goodsCaseImageSlideInner {
+    width: 100% !important;
+  }
+}
+
+.goodsCaseImageSlideInner:after {
+  display: block;
+  content: "";
+  padding-top: 135%;
+}
+
+.goodsCaseImageSlideInner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.goodsCaseActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 13px 18px 13px 22px;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+@media (max-width: 1400px) {
+  .goodsCaseActions {
+    padding: 10px 15px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .goodsCaseActions {
+    display: none;
+  }
+}
+
+.goodsCaseActions button {
+  cursor: pointer;
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #1d1d1b;
+  background-color: transparent;
+  &.activeSize{
+    text-decoration: underline;
+  }
+}
+
+.goodsCaseActions  button:hover {
+  text-decoration: underline;
+}
+
+.goodsCaseActions button.unavailable {
+  color: #b4b2b2;
+  cursor: default;
+  pointer-events: none;
+}
+
+.goodsCaseImagePrev,
+.goodsCaseImageNext {
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 10px;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18px;
+}
+
+.goodsCaseImagePrev svg,
+.goodsCaseImageNext svg {
+  width: 100% ;
+  height: 100% ;
+  fill: transparent;
+  transform: unset;
+}
+
+@media (max-width: 1024px) {
+  .goodsCaseImagePrev,
+  .goodsCaseImageNext {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 992px) {
+  .goodsCaseImagePrev,
+  .goodsCaseImageNext {
+    display: none;
+  }
+}
+
+.goodsCaseImageNext {
+  left: unset;
+  right: 18px;
+}
+
+.goodsCaseImageNext svg {
+  transform: rotate(180deg);
+}
+
+.goodsCaseNext,
+.goodsCasePrev {
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 10px;
+  z-index: 50;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+}
+
+.goodsCaseNext svg,
+.goodsCasePrev svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 993px) {
+  .goodsCaseNext,
+  .goodsCasePrev {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .goodsCaseNext,
+  .goodsCasePrev {
+    left: 0px;
+  }
+}
+
+.goodsCaseNext {
+  left: unset;
+  right: 8px;
+}
+
+@media (max-width: 680px) {
+  .goodsCaseNext {
+    right: 0px;
+  }
+}
+
+.goodsCaseNext svg {
+  transform: rotate(180deg);
+}
+
+.goodsCaseSizes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 1320px) {
+  .goodsCaseSizes {
+    gap: 10px;
+  }
+}
+
+.goodsCaseTitle {
+  padding: 0 15px;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 13px;
+  color: #1d1d1b;
+  min-height: 40px;
+}
+
+@media (max-width: 680px) {
+  .goodsCaseTitle {
+    min-height: 55px;
+    padding: 0 0 10px;
+  }
+}
+
+.goodsCasePrice {
+  padding: 0 15px;
+  display: block;
+  font-size: 13px;
+  color: #808080;
+}
+
+@media (max-width: 680px) {
+  .goodsCasePrice {
+    padding: 0;
+  }
+}

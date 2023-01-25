@@ -1,0 +1,68 @@
+.actionDropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  transition: 0.2s;
+  transform: translateY(-120%);
+  border: 1px solid #c4c4c4;
+  width: 100%;
+  max-width: 400px;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.languages {
+}
+.inner {
+  position: relative;
+  padding: 24px 43px;
+}
+.close {
+  width: 100%;
+}
+.closeIco {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.closeIco {
+}
+.content {
+}
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: -15px;
+}
+.item {
+  a {
+    font-family: "AkzidenzGroteskPro";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 17px;
+    color: #808080;
+    &:hover {
+      color: #FB514F;
+    }
+  }
+}
+.itemActive {
+  margin-bottom: 3px;
+  pointer-events: none;
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+}

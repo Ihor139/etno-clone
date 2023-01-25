@@ -1,0 +1,19 @@
+@import "./_help";
+
+.desktop {
+  @media (max-width: 1100px) {
+    display: none !important;
+  }
+}
+
+.tablet {
+  @media (min-width: 1101px) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @media (min-width: 550px) {
+    display: none !important;
+  }
+}

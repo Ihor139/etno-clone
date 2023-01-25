@@ -1,0 +1,33 @@
+.nav {
+  margin-right: auto;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-left: -20px;
+}
+.itemInner {
+}
+.title {
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #1e0f00;
+  &:after {
+    opacity: 0;
+    position: absolute;
+    content: "";
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    transition: 0.3s;
+  }
+}
+.txt {
+}

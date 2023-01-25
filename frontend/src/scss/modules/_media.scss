@@ -1,0 +1,232 @@
+@mixin for-350 {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+@mixin from-350 {
+  @media (min-width: 351px) {
+    @content;
+  }
+}
+@mixin for-370 {
+  @media (max-width: 370px) {
+    @content;
+  }
+}
+
+@mixin from-370 {
+  @media (min-width: 371px) {
+    @content;
+  }
+}
+
+@mixin for-420 {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin from-420 {
+  @media (min-width: 421px) {
+    @content;
+  }
+}
+
+@mixin from-420-for-992 {
+  @media (min-width: 421px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin for-550 {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin from-550 {
+  @media (min-width: 551px) {
+    @content;
+  }
+}
+
+@mixin for-680 {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin from-680 {
+  @media (min-width: 680px) {
+    @content;
+  }
+}
+
+@mixin for-768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin from-768 {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin for-800 {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin from-800 {
+  @media (min-width: 801px) {
+    @content;
+  }
+}
+
+@mixin for-992 {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin from-992 {
+  @media (min-width: 993px) {
+    @content;
+  }
+}
+
+@mixin for-1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin from-1024 {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin for-1100 {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin from-1100 {
+  @media (min-width: 1101px) {
+    @content;
+  }
+}
+
+@mixin from-1100-for-1300 {
+  @media (min-width: 1101px) and (max-width: 1320px) {
+    @content;
+  }
+}
+
+@mixin for-1200 {
+  @media (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin from-1200 {
+  @media (min-width: 1221px) {
+    @content;
+  }
+}
+
+@mixin for-1300 {
+  @media (max-width: 1320px) {
+    @content;
+  }
+}
+
+@mixin from-1300 {
+  @media (min-width: 1321px) {
+    @content;
+  }
+}
+
+@mixin for-1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin from-1400 {
+  @media (min-width: 1401px) {
+    @content;
+  }
+}
+
+@mixin for-1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin from-1440 {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin for-1500 {
+  @media (max-width: 1510px) {
+    @content;
+  }
+}
+
+@mixin from-1500 {
+  @media (min-width: 1511px) {
+    @content;
+  }
+}
+
+@mixin for-1600 {
+  @media (max-width: 1610px) {
+    @content;
+  }
+}
+
+@mixin from-1600 {
+  @media (min-width: 1611px) {
+    @content;
+  }
+}
+
+@mixin for-1800 {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin from-1800 {
+  @media (min-width: 1801px) {
+    @content;
+  }
+}
+
+@mixin for-680 {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin from-680 {
+  @media (min-width: 681px) {
+    @content;
+  }
+}
+
+@mixin from-680-for-992 {
+  @media (min-width: 681px) and (max-width: 992px) {
+    @content;
+  }
+}

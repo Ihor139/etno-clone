@@ -1,0 +1,85 @@
+textarea,
+input,
+a,
+a:focus,
+a:active,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+a,
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+select {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+b {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove outline on the forms and links */
+input,
+textarea {
+  border: 0;
+  outline: none;
+  outline: 0;
+  outline-offset: 0;
+  -webkit-appearance: none;
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+}

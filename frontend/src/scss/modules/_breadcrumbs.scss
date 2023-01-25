@@ -1,0 +1,76 @@
+@import "../modules/_help";
+
+.breadcrumbs {
+  &__inner {
+  }
+
+  &__list {
+    @include flexAlignCenter;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    margin-left: 11px;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      transform: translateY(-40%);
+      width: 5px;
+      height: 15px;
+      background-image: url(../static/icons/bread-arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: 7px 9px;
+      background-position: center;
+    }
+    &:first-child {
+      padding-left: 0;
+      margin-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    &.last-item {
+      margin-left: auto;
+      text-transform: uppercase;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 11px;
+    color: #333;
+  }
+}
+
+.product-page {
+  .breadcrumbs {
+    padding: 15px 0;
+    @include for-992 {
+      display: none;
+    }
+  }
+}
+
+.info-page,
+.contact-page,
+.article-page,
+.blog-page{
+  .breadcrumbs {
+    padding: 15px 0;
+    @include for-992 {
+      border-bottom: 1.5px solid #c4c4c4;
+      padding: 10px 0;
+    }
+    .last-item {
+      @include for-992 {
+        display: none;
+      }
+    }
+  }
+}

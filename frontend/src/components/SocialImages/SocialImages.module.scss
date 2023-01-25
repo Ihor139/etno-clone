@@ -1,0 +1,118 @@
+.imageDashboard {
+  margin-bottom: 80px;
+}
+.imageDashboardInner {
+}
+.imageDashboardLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  margin-bottom: 0 !important;
+}
+
+.imageDashboardLink .txt {
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #1d1d1b;
+}
+
+.imageDashboardLink .ico {
+  transition: 0.2s;
+}
+
+.imageDashboardLink:hover .ico {
+  transform: translateX(10px);
+}
+
+.imageDashboardList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2.5px;
+}
+
+.imageDashboardItem {
+  width: 25%;
+  padding: 0 2.5px;
+}
+
+@media (max-width: 992px) {
+  .imageDashboardItem {
+    width: 50%;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .imageDashboardItem {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.imageDashboardImg {
+  position: relative;
+  display: block;
+}
+
+.imageDashboardImg:after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+.imageDashboardImg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blogPostLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 33px;
+  gap: 22px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  span {
+    &.txt{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    transition: 0.3s;
+    }
+    &.ico{
+        
+      transform: translateY(150%);
+      width: 20px;
+      height: 12px;
+      transition: .3s;
+    }
+  }
+}
+
+.imageDashboardImg:hover .blogPostLink {
+  opacity: 1;
+  visibility: visible;
+}
+
+.imageDashboardImg:hover .blogPostLink .ico {
+  transform: translateY(0);
+}

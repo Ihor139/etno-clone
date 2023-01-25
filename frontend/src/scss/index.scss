@@ -1,0 +1,175 @@
+@import "./_reset.scss";
+@import "./fonts.scss";
+
+* {
+  font-family: "AvenirNext";
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+html.disablScroll,
+body.disableScroll {
+  overflow: hidden;
+}
+
+.siteContainer {
+  padding: 0 45px;
+}
+
+@media (max-width: 1024px) {
+  .siteContainer {
+    padding: 0 20px;
+  }
+}
+
+.lazyImg {
+  transition: opacity 0.1s linear 0.1s;
+  opacity: 0;
+}
+
+.lazyloading,
+.lazyloaded {
+  opacity: 1;
+}
+
+.dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 43px 116px 50px 83px;
+  min-height: 457px;
+  border-top: 1px solid #c4c4c4;
+  background-color: #fff;
+  transition: 0.2s;
+  transform: translateY(-120%);
+}
+
+.dropdown.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown.fade {
+  transition: 0s;
+}
+.dropdown__inner {
+  position: relative;
+}
+
+.dropdown .accord-wrapp a {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #525252;
+  padding: 8px 20px;
+  width: fit-content;
+}
+
+.dropdown .accord-wrapp:after {
+  display: none;
+}
+
+.accord-wrapp:after {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.accord-wrapp .hover-arrow {
+  display: none;
+}
+
+.dropdown .accord-wrapp .hover-arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.dropdown .accord-wrapp a:hover .hover-arrow {
+  transform: translateX(50px);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  .dropdown .accord-wrapp .hover-arrow {
+    display: none;
+  }
+}
+
+.dropdown-menu-img {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  height: 405px;
+  width: 405px;
+}
+
+.popup {
+  &__body {
+  }
+  &__inner {
+    height: 100%;
+  }
+  &__content {
+  }
+  &__close {
+    cursor: pointer;
+  }
+  &__close-ico {
+  }
+}
+
+.site-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  .txt{
+    font-family: AvenirNext;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1b;
+  }
+  .ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s
+  }
+  &--arrow{
+
+  }
+}

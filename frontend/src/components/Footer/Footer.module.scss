@@ -1,0 +1,39 @@
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #6b6b64;
+  padding: 80px 0;
+}
+.inner {
+}
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1d1d1b;
+  }
+  .ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+  }
+}
+.copyright {
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000;
+}

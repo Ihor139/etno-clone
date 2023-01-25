@@ -1,0 +1,29 @@
+.pageWrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.topIndent {
+  padding-top: 62px;
+}
+
+@media (max-width: 680px) {
+  .topIndent {
+    padding-top: 48px;
+  }
+}

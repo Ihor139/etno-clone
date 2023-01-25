@@ -1,0 +1,87 @@
+.previewGoods {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 992px) {
+  .previewGoodsInner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .previewGoodsInner {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+.previewGoodsTitle {
+  display: flex;
+  justify-content: center;
+  font-family: "AvenirNext";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: #1d1d1b;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 992px) {
+  .previewGoodsTitle {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 550px) {
+  .previewGoodsTitle {
+    text-align: start;
+  }
+}
+
+@media (min-width: 681px) {
+  .previewGoodsTitle br {
+    display: none;
+  }
+}
+
+.previewGoodsWrapper {
+  margin: 0 -2.5px;
+}
+
+@media (max-width: 992px) {
+  .previewGoodsWrapper {
+    margin: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .previewGoodsWrapper {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 992px) {
+  .previewGoodsWrapper.notSlider {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .previewGoodsWrapper.notSslider .previewGoodsList {
+    flex-wrap: wrap;
+    row-gap: 64px;
+  }
+}
+
+@media (max-width: 992px) {
+  .previewGoodsWrapper.notSlider .previewGoodsCase {
+    width: 50%;
+    padding: 0 2.5px;
+  }
+}
+
+.previewGoodsList {
+  display: flex;
+}
