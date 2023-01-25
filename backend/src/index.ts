@@ -14,6 +14,10 @@ import {
 } from "./routes";
 
 dotenv.config();
+const corsOptions ={
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200
+}
 
 const PORT = process.env.PORT;
 const MONGO_URL: string = (process.env.MONGO_URL as string);
@@ -27,7 +31,7 @@ mongoose.connect(MONGO_URL).then(() => {
 const app: Application = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use("/upload", express.static("upload"));
 
 app.use('/api', [
