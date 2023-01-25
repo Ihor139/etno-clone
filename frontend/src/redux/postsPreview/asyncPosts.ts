@@ -4,7 +4,7 @@ import { Post } from "./types";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchPostsPreview = createAsyncThunk("/api/posts", async () => {
-  const { data } = await axios.get<Post[]>("/posts");
+export const fetchPostsPreview = createAsyncThunk("/posts", async () => {
+  const { data } = await axios.get<Post[]>("/api/posts");
   return data;
 });

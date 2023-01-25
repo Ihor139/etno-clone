@@ -4,7 +4,7 @@ import { Item } from "./types";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchNavigation = createAsyncThunk("/api/navigation", async () => {
+export const fetchNavigation = createAsyncThunk("/navigation", async () => {
   const { data } = await axios.get<Item[]>("/api/navigation");
   return data;
 });

@@ -3,7 +3,7 @@ import {Product} from "./types";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchProductsPreview = createAsyncThunk("/api/products/new", async () => {
+export const fetchProductsPreview = createAsyncThunk("/products/new", async () => {
   const { data } = await axios.get<Product[]>("/api/products/new");
   return data;
 });
