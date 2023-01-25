@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "public": false,
   "rewrites": [
     {
       "source": "/api/:path*",
