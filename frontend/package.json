@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://etno-clone-node.vercel.app/api",
+  "proxy": "http://localhost:5000/api",
   "homepage":".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
