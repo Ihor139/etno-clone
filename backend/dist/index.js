@@ -33,6 +33,10 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const dotenv = __importStar(require("dotenv"));
 const routes_1 = require("./routes");
 dotenv.config();
+const corsOptions = {
+    credentials: true,
+    optionSuccessStatus: 200
+};
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 mongoose_1.default.connect(MONGO_URL).then(() => {
@@ -43,7 +47,7 @@ mongoose_1.default.connect(MONGO_URL).then(() => {
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)(corsOptions));
 app.use("/upload", express_1.default.static("upload"));
 app.use('/api', [
     routes_1.ProductRouter,
