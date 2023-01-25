@@ -6,5 +6,11 @@
       "source": "/api/:path*",
       "destination": "https://etno-clone-node.vercel.app/:path*"
     }
+  ],
+  "redirects":[
+    {
+      "source":"/:path*",
+      "destination":"https://etno-clone-node.vercel.app/:path*"
+    }
   ]
 }
