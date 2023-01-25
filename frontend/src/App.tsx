@@ -10,11 +10,11 @@ import {Home} from "./pages";
 
 const App: React.FC = () => {
 
-	React.useEffect(() => {
+	// React.useEffect(() => {
 		;(async () => {
 			await axios.get('api/token/add')
 		})();
-	}, [])
+	// }, [])
 
 	return (
 		<Routes>
