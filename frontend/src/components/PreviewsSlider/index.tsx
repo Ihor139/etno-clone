@@ -32,9 +32,9 @@ const PreviewsSlider: React.FC = () => {
 				</div>
 				<div className={clsx([styles.previewGoodsWrapper])}>
 					<div className={clsx([styles.previewGoodsList])}>
-						{items.map((item: Product, ind) => {
+						{ Array.isArray(items) ? items.map((item: Product, ind) => {
 							return <ProductCase key={ind} {...item} />
-						})}
+						}) : []}
 					</div>
 				</div>
 			</div>
