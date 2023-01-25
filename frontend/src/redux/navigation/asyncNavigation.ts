@@ -5,6 +5,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchNavigation = createAsyncThunk("/navigation", async () => {
-  const { data } = await axios.get<Item[]>("/navigation");
+  const { data } = await axios.get<Item[]>(process.env.BASE_URL+"/navigation");
   return data;
 });

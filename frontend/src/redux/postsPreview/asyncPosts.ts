@@ -5,6 +5,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchPostsPreview = createAsyncThunk("/posts", async () => {
-  const { data } = await axios.get<Post[]>("/posts");
+  const { data } = await axios.get<Post[]>(process.env.BASE_URL+"/posts");
   return data;
 });

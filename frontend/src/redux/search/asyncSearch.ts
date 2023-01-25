@@ -3,6 +3,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchItems = createAsyncThunk("search", async (key: string) => {
-  const { data } = await axios.get<Product[]>(`/search/${key}`);
+  const { data } = await axios.get<Product[]>(process.env.BASE_URL+`/search/${key}`);
   return data;
 });
