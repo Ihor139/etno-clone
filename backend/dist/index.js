@@ -34,6 +34,7 @@ const dotenv = __importStar(require("dotenv"));
 const routes_1 = require("./routes");
 dotenv.config();
 const corsOptions = {
+    origin: '*',
     credentials: true,
     optionSuccessStatus: 200
 };
