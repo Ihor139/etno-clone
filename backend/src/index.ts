@@ -15,7 +15,6 @@ import {
 
 dotenv.config();
 const corsOptions ={
-  origin: 'https://etno-clone-node.vercel.app',
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }
